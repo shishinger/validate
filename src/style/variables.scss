@@ -1,0 +1,18 @@
+$blue: #16c2d5;
+$blue_light: #89dee2;
+$blue_dark: #10217d;
+$blue_gray: #527c88;
+$skin: #d7baad;
+$gray: #2e4450;
+$red: #ed1b24;
+
+$text: $gray;
+$bg: #ffffff;
+$accent: $blue;
+$error: $red;
+
+%df_cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

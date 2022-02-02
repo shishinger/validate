@@ -1,0 +1,30 @@
+.required::after {
+  content: "*";
+  margin-left: 0.1em;
+}
+.error {
+  .input,
+  .select {
+    border-color: $red;
+  }
+  &__message {
+    position: absolute;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.9em;
+    transform: translateY(0.2em);
+    &.self {
+      bottom: -1.2em;
+    }
+  }
+}
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}

@@ -1,0 +1,29 @@
+.section {
+  @extend %df_cc;
+  flex-direction: column;
+  width: 100%;
+}
+.block {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  & + & {
+    margin-top: 2em;
+  }
+  &__item {
+    position: relative;
+    padding-top: 1.2em;
+    &--full {
+      flex: 0 0 100%;
+    }
+    &--half {
+      flex: 0 1 30%;
+    }
+    &--third {
+      flex: 0 0 31.8%;
+    }
+  }
+}
