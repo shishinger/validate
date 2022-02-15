@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import useVuelidate from "@vuelidate/core";
 import Main from "./components/Main.vue";
 import Address from "./components/Address.vue";
 import Passport from "./components/Passport.vue";
@@ -21,19 +20,6 @@ export default {
     Main,
     Address,
     Passport,
-  },
-  setup() {
-    return { v$: useVuelidate({ $touch: blur }) };
-  },
-  methods: {
-    async next() {
-      const isFormCorrect = await this.v$.$validate();
-
-
-      if (!isFormCorrect) {
-        console.log(this.v$.$errors);
-      }
-    },
   },
 };
 </script>

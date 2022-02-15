@@ -9,11 +9,7 @@
       :value="day"
     >
       <option value disabled>День</option>
-      <option
-        v-for="dayValue in getDay"
-        :key="dayValue"
-        :value="dayValue"
-      >{{ dayValue }}</option>
+      <option v-for="dayValue in getDay" :key="dayValue" :value="dayValue">{{ dayValue }}</option>
     </select>
   </div>
   <div class="block__item block__item--third">
@@ -26,11 +22,7 @@
       :id="id + 'Month'"
     >
       <option value disabled>Месяц</option>
-      <option
-        v-for="monthValue in monthList"
-        :key="monthValue"
-        :value="monthValue"
-      >{{ monthValue }}</option>
+      <option v-for="monthValue in monthList" :key="monthValue" :value="monthValue">{{ monthValue }}</option>
     </select>
   </div>
   <div class="block__item block__item--third">
@@ -58,13 +50,9 @@ defineProps({
   month: { type: String },
   year: { type: String },
   section: { type: String },
-  id: { type: String }
+  id: { type: String },
 });
-defineEmits([
-  "update:day",
-  "update:month",
-  "update:year"
-])
+defineEmits(["update:day", "update:month", "update:year"]);
 </script>
 
 <script>
@@ -111,6 +99,4 @@ export default {
 };
 </script>
 
-
-<style>
-</style>
+<style></style>
